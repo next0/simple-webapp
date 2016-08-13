@@ -1,0 +1,16 @@
+{
+  "name": "simple-webapp",
+  "version": "0.0.1",
+  "description": "node web server for docker practice",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "next0",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
+}

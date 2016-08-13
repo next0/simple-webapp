@@ -1,0 +1,15 @@
+sudo: required
+
+language: node_js
+
+services:
+  - docker
+
+env:
+  - DOCKER_IMAGE_NAME="next0/simple-webapp"
+
+script:
+  - ./bin/build.sh
+
+after_success:
+  - ./bin/publish.sh
