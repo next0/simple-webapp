@@ -1,15 +1,15 @@
 sudo: required
 
-language: node_js
-
 services:
   - docker
 
 env:
   - DOCKER_IMAGE_NAME="next0/simple-webapp"
 
-script:
-  - ./bin/build.sh
+install: true
 
-after_success:
-  - ./bin/publish.sh
+before_script: ./bin/build.sh
+
+script: ./bin/test.sh
+
+after_success: ./bin/publish.sh
